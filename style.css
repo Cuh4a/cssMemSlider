@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    line-height: 1;
+    color: orange;
+    font-size: 1rem;
+    font-family: 'Tapestry', cursive;
+    font-weight: 400;
+}
+
+.header__content {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    max-width: 80em;
+    height: 7.5em;
+    padding: 1.25em 1.25em;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+}
+
+.header__title h1 {
+    font-size: 6rem;
+}
+
+.mainly {
+    flex: 1 1 auto;
+}
+
+
+
+
+
+
+.footer__container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 80em;
+    height: 7.5em;
+    padding: 1.25em 1.25em;
+    margin: 0 auto;
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
