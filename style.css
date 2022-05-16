@@ -45,7 +45,7 @@ body {
 .mainly {}
 
 .mainly__container {
-    width: 97vw;
+    width: 67vw;
     height: 99vh;
     margin: 0 auto;
     padding: .5rem 0;
@@ -80,7 +80,7 @@ body {
     height: 100%;
     border-radius: 1rem;
     align-self: center;
-    object-fit: content;
+    object-fit: cover;
 }
 
 .content {
@@ -117,8 +117,8 @@ input[name="r"] {
     gap: 0.2rem;
     padding: 0.1rem;
     background: transparent;
-    margin-left: 94%;
-    margin-top: -1.5rem;
+    margin-left: 93%;
+    margin-top: -1.23rem;
 }
 
 .control__checked div {
@@ -139,12 +139,17 @@ input[name="r"] {
 .control__checked:hover {
     background: linear-gradient(-45deg, #ecf6ea, hsl(80, 14%, 96%));
 }
-.btn__control:hover .control__checked,
-#r1:checked~.btn__control .control__checked,
-#r2:checked~.btn__control .control__checked,
-#r3:checked~.btn__control .control__checked,
-#r4:checked~.btn__control .control__checked {
-    background-color: #572866;
+
+
+
+
+
+
+#r1:checked~.content .btn__control .control__checked:nth-child(1),
+#r2:checked~.content .btn__control .control__checked:nth-child(2),
+#r3:checked~.content .btn__control .control__checked:nth-child(3),
+#r4:checked~.content .btn__control .control__checked:nth-child(4) {
+    background: linear-gradient(-45deg, #ecf6ea, hsl(80, 14%, 96%));
 }
 
 
@@ -183,52 +188,52 @@ input[name="r"] {
 }
 
 
-@media (max-width: 1440px) {
-    .btn__control {
-        margin-left: 95%;
-    }
-}
+
 
 @media (max-width: 1280px) {
     .btn__control {
-        margin-left: 94%;
+        margin-left: 91%;
     }
+
 }
 
 @media (max-width: 1000px) {
     .btn__control {
-        margin-left: 93%;
+        margin-left: 89%;
+    }
+
+    .item__text {
+        font-size: 1.2rem;
     }
 }
 
 @media (max-width: 850px) {
     .btn__control {
-        margin-left: 92%;
+        margin-left: 88%;
     }
 }
 
 @media (max-width: 768px) {
     .btn__control {
         margin-left: 45%;
-        margin-top: -3.5rem;
+        margin-top: -3.15rem;
     }
 
     .item__text {
+        font-size: 0.85rem;
         padding-top: 1.5rem;
+    }
+}
+
+
+@media (max-width: 580px) {
+    .btn__control {
+        margin-left: 44%;
+        margin-top: -3rem;
     }
 
     .slides__slide img {
         object-fit: cover;
-    }
-}
-
-@media (max-width: 580px) {
-    .btn__control {
-        margin-left: 43%;
-    }
-
-    .slides__slide img {
-        object-fit: content;
     }
 
     .list__item {
@@ -236,15 +241,21 @@ input[name="r"] {
     }
 
     .item__text {
-        font-size: 1.2rem;
+        font-size: 0.75rem;
         padding-top: 1.5rem;
     }
+
+    .control__checked {
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+
 }
 
 @media (max-width: 485px) {
     .slides__slide img {
         height: 80%;
-        object-fit: content;
+        object-fit: cover;
         align-self: flex-start;
     }
 
