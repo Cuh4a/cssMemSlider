@@ -1,0 +1,278 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    line-height: 1.1;
+    height: auto;
+    color: white;
+    font-size: 1rem;
+}
+
+.mainly {}
+
+.mainly__container {
+    width: 67vw;
+    height: 99vh;
+    margin: 0 auto;
+    padding: .5rem 0;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.slider__slides {
+    display: flex;
+    width: 500%;
+    height: 100%;
+    transition: all 1s ease;
+}
+
+.slides__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 80vh;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.slides__slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    align-self: center;
+    object-fit: cover;
+}
+
+.content {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+.slides__list {
+    display: flex;
+    width: 400%;
+    transition: all 1s ease;
+}
+
+.list__item {
+    padding-top: 2rem;
+    width: 33%;
+}
+
+.item__text {
+    width: 80%;
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+input[name="r"] {
+    display: none;
+}
+
+.btn__control {
+    display: flex;
+    height: inherit;
+    gap: 0.2rem;
+    padding: 0.1rem;
+    background: transparent;
+    margin-left: 93%;
+    margin-top: -1.23rem;
+}
+
+.control__checked div {
+    height: 2rem;
+}
+
+.control__checked {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    width: 1rem;
+    height: 1rem;
+    background: linear-gradient(-45deg, black, gray);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.control__checked:hover {
+    background: linear-gradient(-45deg, #ecf6ea, hsl(80, 14%, 96%));
+}
+
+
+
+
+
+
+#r1:checked~.content .btn__control .control__checked:nth-child(1),
+#r2:checked~.content .btn__control .control__checked:nth-child(2),
+#r3:checked~.content .btn__control .control__checked:nth-child(3),
+#r4:checked~.content .btn__control .control__checked:nth-child(4) {
+    background: linear-gradient(-45deg, #ecf6ea, hsl(80, 14%, 96%));
+}
+
+
+#r1:checked~#slides .slider__slides {
+    margin-left: 0;
+}
+
+#r2:checked~#slides .slider__slides {
+    margin-left: -100%;
+}
+
+#r3:checked~#slides .slider__slides {
+    margin-left: -200%;
+}
+
+#r4:checked~#slides .slider__slides {
+    margin-left: -300%;
+}
+
+
+
+#r1:checked~.content #content .slides__list {
+    margin-left: 0;
+}
+
+#r2:checked~.content #content .slides__list {
+    margin-left: -100%;
+}
+
+#r3:checked~.content #content .slides__list {
+    margin-left: -200%;
+}
+
+#r4:checked~.content #content .slides__list {
+    margin-left: -300%;
+}
+
+
+
+
+@media (max-width: 1280px) {
+    .btn__control {
+        margin-left: 91%;
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .btn__control {
+        margin-left: 89%;
+    }
+
+    .item__text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .btn__control {
+        margin-left: 88%;
+    }
+}
+
+@media (max-width: 768px) {
+    .btn__control {
+        margin-left: 45%;
+        margin-top: -3.15rem;
+    }
+
+    .item__text {
+        font-size: 0.85rem;
+        padding-top: 1.5rem;
+    }
+}
+
+
+@media (max-width: 580px) {
+    .btn__control {
+        margin-left: 44%;
+        margin-top: -3rem;
+    }
+
+    .slides__slide img {
+        object-fit: cover;
+    }
+
+    .list__item {
+        margin-top: 0rem;
+    }
+
+    .item__text {
+        font-size: 0.75rem;
+        padding-top: 1.5rem;
+    }
+
+    .control__checked {
+        width: 0.8rem;
+        height: 0.8rem;
+    }
+
+}
+
+@media (max-width: 485px) {
+    .slides__slide img {
+        height: 80%;
+        object-fit: cover;
+        align-self: flex-start;
+    }
+
+    .btn__control {
+        margin-left: 45%;
+        margin-top: -7rem;
+    }
+
+    .item__text {
+        font-size: 1rem;
+        padding-top: 0rem;
+        margin-top: -5rem;
+    }
+}
+
+@media (max-width: 410px) {
+    .item__text {
+        font-size: .7rem;
+    }
+}
